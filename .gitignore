@@ -1,0 +1,11 @@
+build
+.gradle
+.project
+/nbproject/
+/nbproject/private/
+.nb-gradle/
+/.settings
+.classpath
+/target/
+.DS_Store
+.idea/

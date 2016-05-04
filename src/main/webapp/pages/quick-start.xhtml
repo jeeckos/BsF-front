@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<ui:composition template="/pages/template/baseTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="content">
+		<b:container>
+			<h2>Requirements</h2>
+			<p>Read the <a href="requirements.xhtml">requirements page</a></p>
+			<hr/>
+		
+			<h2>Download</h2>
+			<p>You have multiple ways to download BootsFaces:</p>
+			<b:tabView contentStyle="border-right: 1px solid #ddd;border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;padding:10px">
+				<b:tab title="Maven">
+					<br/>
+					<p>Add these lines to your Maven pom.xml build file:</p>
+					<pre class="snippet">
+				         <script type="text/syntaxhighlighter" class="brush: xml; gutter: false;"><![CDATA[
+							<dependency>
+							    <groupId>net.bootsfaces</groupId>
+							    <artifactId>bootsfaces</artifactId>
+							    <version>0.8.0</version>
+							    <scope>compile</scope>
+							</dependency>
+						  ]]></script>
+					</pre>
+				</b:tab>
+				<b:tab title="Gradle">
+					<br/>
+					<p>Add these lines to your Gradle build file:</p>
+					<pre class="snippet">
+				         <script type="text/syntaxhighlighter" class="brush: java; gutter: false;"><![CDATA[
+							compile 'net.bootsfaces:bootsfaces:0.8.2'
+						  ]]></script>
+					</pre>
+				</b:tab>
+				<b:tab title="Maven developer preview">
+					<br/>
+					<p>
+						Every once in a while, we publish a developer snapshot for testing and preview purposes. Note that these developer previews are not suited for production. In fact, the main purpose of a developer preview is to give the early adopter of the community an option to test and evaluate new features early, and to tell us about bugs. In other words: we know the previews are buggy, and hope there are enthusiasts helping us to polish the software before it hits the market. The great thing is: usually there are daring developers you give the preview version a try and report us back. More often than not, that boils down to being a lot of work for us, but we really appreciate your help. Thanks, early adopters!
+						<br/>
+						Now that you are aware of the risks, add these lines to your Maven pom.xml build file:
+					</p>
+					<pre class="snippet">
+				         <script type="text/syntaxhighlighter" class="brush: xml; gutter: false;"><![CDATA[
+							<repositories>
+							    <repository>
+							      <id>central</id>
+							      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+							      <releases><enabled>false</enabled></releases>
+							      <snapshots><enabled>true</enabled></snapshots>
+							    </repository>
+							</repositories>
+						  ]]></script>
+					</pre>
+					<p>After that, add the dependency to the new version as shown in the first tab, this time adding the suffix <code>-SNAPSHOT</code>.</p>
+				</b:tab>
+				<b:tab title="Manual download">
+					<br/>
+					<p>If you have not downloaded BootsFaces yet, <a href="download.xhtml">click here</a>.</p>
+				</b:tab>
+			</b:tabView>
+			<hr/>
+			
+			<h2>Starting a project</h2>
+			<p>
+			Probably the easiest way to get started is to grab one of the demo projects at <a href="https://github.com/stephanrauh/BootsFaces-Examples" target="_blank">https://github.com/stephanrauh/BootsFaces-Examples</a>
+			<br/>
+			Alternatively, you can also start from scratch. Open your favorite IDE, start a new project and add the BootsFaces jar you've downloaded to your libraries.
+			<br/>
+			Now, create a new JSF page and make the page header look as follows:
+			</p><br/>
+			<pre class="snippet">
+		         <script type="text/syntaxhighlighter" class="brush: html; gutter: false;"><![CDATA[
+					<?xml version='1.0' encoding='UTF-8' ?>
+					<!DOCTYPE html>
+					<html xmlns="http://www.w3.org/1999/xhtml"
+					      xmlns:b="http://bootsfaces.net/ui"
+					      xmlns:h="http://java.sun.com/jsf/html"
+					      xmlns:f="http://java.sun.com/jsf/core">
+				  ]]></script>
+			</pre>
+			<br/>
+			<p>
+			Notice the <code>&lt;!DOCTYPE html&gt;</code> declaration, needed because BootsFaces makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype and the <code>xmlns:b="http://bootsfaces.net/ui"</code> namespace, that enables the use of BootsFaces tags in your JSF page.
+			<br/>
+			You are now ready to develop your project with BootsFaces!
+			<br/>
+			This is a minimal BootsFaces page to get you started:
+			<br/>
+			</p>
+			<pre class="snippet">
+		         <script type="text/syntaxhighlighter" class="brush: html; gutter: false;"><![CDATA[
+					<?xml version='1.0' encoding='UTF-8' ?>
+					<!DOCTYPE html>
+					<html xmlns="http://www.w3.org/1999/xhtml"
+					      xmlns:b="http://bootsfaces.net/ui"
+					      xmlns:f="http://java.sun.com/jsf/core"
+					      xmlns:h="http://java.sun.com/jsf/html">
+					    <h:head>
+					        <title>BootsFaces Basic Page</title>
+					    </h:head>
+					    <h:body>
+					        <b:container>
+					            <b:row>
+					                <b:column>
+					                    <h1>Hello, world!</h1>
+					                </b:column>
+					            </b:row>
+					        </b:container>
+					    </h:body>
+					</html>
+				  ]]></script>
+			</pre>
+			<br/>
+			<p>However, we suggest you start reading the <a href="http://showcase.bootsfaces.net/layout/basic.jsf">Basic Layout</a> page and have a look at the <a href="http://showcase.bootsfaces.net/Examples/starter_template.jsf">starter template</a> in the <a href="http://showcase.bootsfaces.net/Examples/index.jsf">Examples</a> section.</p>
+			<br/>
+			<hr/>
+			<h2>Troubleshooting: web.xml and faces-config.xml <b:badge value="updated in BootsFaces 0.8.0" /></h2>
+			<p>Sometimes the CSS and Javascript files aren't loaded automatically. If you happen to run into this error, you have to add a few lines to the <code>faces-config.xml</code> and the <code>web.xml</code> files. Notice that we now recommend to use the <code>CombinedResourceHandler</code> of OmniFaces. In earlier vesions of BootsFaces we'd recommended other things, but this didn't work out.</p>
+			<br/>
+			<b:tabView contentStyle="border-right: 1px solid #ddd;border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;padding:10px">
+				<b:tab title="web.xml (recommended)">
+					<br/>
+					<p>Keep the URL patterns of your web application as simple as possible. In this case, the resource files are loaded without further ado. Do not use multiple <code>url-patterns</code>.</p>
+					<pre class="snippet">
+				         <script type="text/syntaxhighlighter" class="brush: xml; gutter: false;"><![CDATA[
+							<servlet>
+							     <servlet-name>Faces Servlet</servlet-name>
+							     <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+							     <load-on-startup>1</load-on-startup>
+							 </servlet>
+							 <servlet-mapping>
+							     <servlet-name>Faces Servlet</servlet-name>
+							    <url-pattern>*.jsf</url-pattern>
+							</servlet-mapping>
+						  ]]></script>
+					</pre>
+				</b:tab>
+				<b:tab title="faces-config.xml">
+					<br/>
+					<p>Adding the <code>CombinedResourceHandler</code> of OmniFaces to the <code>faces-config.xml</code> can fix nasty resource loading problems:</p>
+					<pre class="snippet">
+				         <script type="text/syntaxhighlighter" class="brush: xml; gutter: false;"><![CDATA[
+							<?xml version="1.0" encoding="UTF-8"?>
+							<faces-config
+							    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+							    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+							    version="2.2">
+							   <application>
+							       <resource-handler>org.omnifaces.resourcehandler.CombinedResourceHandler</resource-handler>
+							   </application>
+							</faces-config>
+						  ]]></script>
+					</pre>
+				</b:tab>
+			</b:tabView>
+			<br/>
+			<h2>Theme CSS support <b:badge value="revamped in BootsFaces 0.8.0" /></h2>
+			<p>
+			The BootsFaces_USETHEME context-param in your web.xml controls whether <code>theme.css</code> is loaded or not.<br/><br/>
+			If you set the parameter to false, BootsFaces delivers a CSS file containing the basic layout instructions. This basic file doesn't contain shadows, decorations or colors, so it looks pretty boring. But it's a good starting point to implement your own look and feel.<br/><br/>
+			Setting the parameter to true causes BootsFaces to load <code>theme.css</code>, this is true for Bootstrap and Bootswatch Themes.
+			</p><br/>
+			<pre class="snippet">
+		         <script type="text/syntaxhighlighter" class="brush: xml; gutter: false;"><![CDATA[
+					<context-param>
+					    <param-name>BootsFaces_USETHEME</param-name>
+					    <param-value>default</param-value>
+					</context-param>
+				  ]]></script>
+			</pre><br/>
+			BootsFaces also contains all 16 BootsWatch themes. You can activate any of these by setting <code>BootsFaces_THEME</code> to the name of the theme:<br/><br/>
+			<pre class="snippet">
+		         <script type="text/syntaxhighlighter" class="brush: xml; gutter: false;"><![CDATA[
+					<context-param>
+					    <param-name>BootsFaces_THEME</param-name>
+					    <param-value>cerulean</param-value>
+					</context-param>
+				  ]]></script>
+			</pre><br/>
+			<p>If you need more customization you can use the custom value.</p>
+			<p>Please refer to the <a href="http://showcase.bootsfaces.net/layout/themes.jsf">Themes</a> page for instructions on Custom Theme.</p><br/>
+			<hr/>
+			
+			<h2>Building the BootsFaces.jar from source <b:badge value="revamped in BootsFaces 0.8.0" /></h2>
+			<p>
+				Most of the time you're probably happy with the binaries available at Maven Central or at the download page. However, it's also possible to build BootsFaces from source. This way, you get our latest bug fixes and the newest components, and you can also contribute bug fixes or components yourself to the project. (Truth to tell you get also our newest bugs. Use at own risk).
+				<br/><br/>
+				The BootsFaces source code is hosted on a <a href="https://github.com/TheCoder4eu/BootsFaces-OSP/">GitHub repository</a>. Clone the repository using git (or download the zip file and unpack it to a folder). This folder contains two build files: a Maven <code>pom.xml</code> and an Gradle <code>build.gradle</code>. In fact, there are even two Gradle files: the subfolder <code>gradleResources</code> contains a Gradle build file of its own, which is called by the Gradle build file of the parent project.
+				<br/><br/>
+				The Maven build file is the quick-and-easy solution for most developers. However, it depends on the results of the Gradle build. When the BootsFaces team (or a committer sending us a pull request) changes one of the CSS or JavaScript files, they have to run the Gradle build first. The Gradle build prepares the resources for Maven, which are committed to GitHub. That way, the Maven build is always up-to-date, even if it lacks important parts of the build process.
+				<br/><br/>
+				Cutting a long story short, you're free to use either the Maven or the Gradle build, unless you want to modify the CSS or JavaScript files of BootsFaces.
+				<br/>
+				<h3><b:iconAwesome name="arrow-circle-o-right" size="lg" style="color:#902f64;" /><h:outputText value="&#160;" />The Maven build</h3>
+				<br/>
+				To build the jar, run <code>mvn clean install</code> on the command line. Most IDEs also offer decent support for Maven. For instance, Eclipse users can import the project via "Import --> Maven --> Existing Maven project".
+				<br/>
+				<h3><b:iconAwesome name="arrow-circle-o-right" size="lg" style="color:#902f64;" /><h:outputText value="&#160;" />The Gradle build from Command Line</h3>
+				<br/>
+				Building BootsFaces with Gradle is very straightforward, the only prerequisite is having java installed (JDK 7 or later),
+				<br/>
+				there is no need to have Gradle installed, thanks to the Gradle wrapper.
+				<br/>
+				Just change your directory to the root directory of the project and execute:
+				<br/>
+				<code>./gradlew</code><br/>
+				on *NIX systems or
+				<br/>
+				<code>gradlew.bat</code><br/>
+				on Windows systems.
+				<br/>
+				After few seconds you should see the "BUILD SUCCESSFUL" message and will find the library in the subdirectory build/libs .
+				<br/>
+				<h3><b:iconAwesome name="arrow-circle-o-right" size="lg" style="color:#902f64;" /><h:outputText value="&#160;" />The Gradle build in your IDE</h3>
+				<br/>
+				Import the Gradle project into your IDE. Whether you import the subproject or not, is up to you. You don't need it. To build the project, first run Gradle with the target <code>buildResources</code> (which is inherited from the subproject). After that, run "Gradle assemble" to build the BootsFaces-OSP.jar. You find the jar file in the <code>build</code> folder of your project.	
+			</p>
+			<br/>
+			<hr/>
+			
+			<h2>Customization of the BootsFaces.jar</h2>
+			<p>
+				Until there is a new version of the customizer, you can still customize the look and feel taking advantage of the build system. There are many Bootstrap customizers on the net, for example <a href="http://bootswatch.com/">Bootswatch</a>. What you need is a file with the variables to customize the build. Some customizers will provide you a .less file as well.
+				<br/>
+				Put the files in the <code>BootsFaces/less</code> directory of the build and tweak the bs-* files to use your variables / .less file.
+			</p><br/>
+			<hr/>
+			
+			<h2>Roadmap<h:outputText value="&#160;" /><b:badge value="0.8.1 → 0.9 → 1.0" /></h2>
+			<p>
+				The big tickets of the next versions are:<br/>
+				<ul>
+					<li>Going mobile with swipe gesture support</li>
+					<li>Making the library more orthogonal (i.e. adding similar attributes like <code>style</code> and <code>disabled</code> to every component that might benefit from such a feature).</li>
+					<li>Improving the AJAX support, making every visible component AJAX-aware.</li>
+					<li>And - of course - support for Bootstrap 4.</li>
+					<li>Possibly we're also going to re-implement the customizer, allowing you to use a special version of BootsFaces with a small footprint (which you trade for a limited set of components).</li>
+					<li>Last, not least, we'd like to continue to improve the documentation.</li>
+				</ul>
+				<br/>Minor (but still important) tickets are<br/>
+				<ul>
+					<li>fixing bugs :)</li>
+					<li>adding components</li>
+					<li>client-side validation and JSR303 support</li>
+					<li>find out why the <code>CombinedResourceHandler</code> of OmniFaces is needed</li>
+				</ul>
+				In any case, we'd like to hear from you. Use the bug tracker to inform us about bugs you've discovered, components you'd like to see or contributions you'd like to make. Your feedback is welcome!
+			</p>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+		</b:container>
+	</ui:define>
+</ui:composition>

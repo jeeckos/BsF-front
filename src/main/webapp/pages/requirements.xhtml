@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<ui:composition template="/pages/template/baseTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="content">
+		<b:container>
+			<h2>Requirements</h2>
+			<br/>
+			<b:well>
+				<b>BootsFaces is targeted at Java EE 6/7 and requires a Java 1.6 or later VM.</b>
+				<br/><br/>
+				<b>JSF 2.0, 2.1 and 2.2 are supported.</b>
+				<br/><br/>
+				<b>Oracle Mojarra 2.2+ or Apache MyFaces 2.2+</b>
+				<br/><br/>
+				<p><b:badge value="Attention" /><h:outputText value="&#160;" />Some notes: </p>
+				<ul>
+					<li>
+						<b>Note1</b>: Oracle has dropped Commercial support for Glassfish as of version 4.0. Glassfish will therefore be only the Reference Implementation for Java EE.<br/>
+						BootsFaces is therefore first tested for compliance in Glassfish, then tested on other Application Servers such as WildFly/JBoss and TomEE.
+						<br/><br/>
+					</li>
+					<li>
+						<b>Note2</b>: Glassfish 3.2 is installed with an old version of the JSF library(2.1.6) with a known bug fixed in version 2.1.8. we suggest you to update the library to the latest version.
+					</li>
+				</ul>
+			</b:well>
+		</b:container>
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,57 @@
+buildscript {
+  version = '1.0.0.Beta8'
+
+  repositories {
+    mavenLocal()
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath "io.spring.gradle:dependency-management-plugin:0.5.6.RELEASE"
+    classpath "org.wildfly.swarm:wildfly-swarm-plugin:$version"
+  }
+}
+
+
+apply plugin: "io.spring.dependency-management"
+apply plugin: 'wildfly-swarm'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url "https://repository.jboss.org/nexus/content/repositories/releases"
+    }
+}
+
+dependencyManagement {
+  imports {
+    mavenBom "org.wildfly.swarm:bom:$version"
+  }
+}
+
+dependencies {
+    // TODO: Add dependencies here ...
+    // You can read more about how to add dependency here:
+    //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:how_to_declare_your_dependencies
+    //testCompile group: 'junit', name: 'junit', version: '4.10'
+    providedCompile 'javax.enterprise:cdi-api:1.2'
+    providedCompile 'javax.servlet:servlet-api:3.+'
+    providedCompile 'com.sun.faces:jsf-api:2.2.+'
+    providedCompile 'com.sun.faces:jsf-impl:2.2.+'
+    providedCompile 'org.glassfish.web:el-impl:2.2'
+    compile "org.wildfly.swarm:jsf"
+    compile "org.wildfly.swarm:cdi"
+}
+war {
+   archiveName = 'BootsFacesFront.war'
+   classpath fileTree(dir: 'bsflib', include: '*') // adds a file-set to the WEB-INF/lib dir.
+}
