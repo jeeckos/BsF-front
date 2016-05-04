@@ -4,6 +4,15 @@ buildscript {
   repositories {
     mavenLocal()
     mavenCentral()
+    maven {
+        url "https://repository.jboss.org"
+    }
+    maven {
+        url "https://repository.jboss.org/nexus/content/repositories/releases"
+    }
+    maven {
+        url "https://repository.jboss.org/nexus/content/groups/public"
+    }
   }
 
   dependencies {
