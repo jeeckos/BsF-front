@@ -37,6 +37,7 @@ apply plugin: 'wildfly-swarm'
 apply plugin: 'java'
 apply plugin: 'war'
 
+
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
@@ -79,3 +80,4 @@ war {
    archiveName = 'BootsFacesFront.war'
    classpath fileTree(dir: 'bsflib', include: '*') // adds a file-set to the WEB-INF/lib dir.
 }
+

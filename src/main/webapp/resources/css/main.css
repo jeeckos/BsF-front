@@ -3,32 +3,40 @@
  * THEME CUSTOMIZATION SECTION 
  *
  **/
-.baseColor {
+.bsf-base-color {
 	background-color: #DA3E00 !important; /* #902f64 */
 }
-.iconColor {
+.bsf-icon-color {
 	color: #DA3E00 !important;
 }
-.navColor {
+.bsf-nav-color {
 	background-color: #DA3E00 !important;
 	border: none !important;
 	background-image: none !important;
 	box-shadow: none !important;
 }
-.footerColor {
+.bsf-footer-color {
 	background-color: white !important;
 	border-top: 1px solid #DDD !important;
 	background-image: none !important;
 	box-shadow: none !important;
 	text-align: center;
 }
-.headMessage {
+.bsf-footer {
+    background-color: #2a2730;
+    color: #99979c;
+    margin-top: 100px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: center;
+}
+.bsf-head-message {
 	background-color: #DA3E00 !important;
 	padding-top: 40px;
 	padding-bottom: 80px;
 	text-align: center;
 }
-.socialBar {
+.bsf-social-bar {
 	background-color: #DA3E00 !important;
 	border-top: 1px solid white;
 	text-align: center;
@@ -43,7 +51,7 @@ ul.share-buttons li{
   display: inline;
 }
 
-.socialIcon {
+.bsf-social-icon {
 	color: white;
 	margin-left: 10px;
 	padding: 15px;
@@ -59,7 +67,7 @@ h3 {
     box-shadow: 0px 4px 0px rgba(223, 46, 27, .5) !important;
 }
 
-#bsfScroll {
+#bsf-scroll {
 	background-image: url("#{resource['images:arrowup.png']}");
 	bottom: 50px;
 	right: 18px;

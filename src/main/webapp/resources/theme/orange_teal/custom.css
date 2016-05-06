@@ -13,7 +13,7 @@ body {
 	background-color: #fc6032 !important;
 }
 
-.iconColor {
+.bsf-icon-color {
 	color: #fc6032 !important;
 }
 
@@ -46,7 +46,17 @@ body {
 	padding-top: 10px;
 }
 
-.headMessage {
+.bsf-footer {
+	background-color: #3c3c3c;
+    color: #fff;
+    margin-top: 100px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: center;
+    border-top: 1px solid #3db7c4;
+}
+
+.bsf-head-message {
 	/*background-color: #43bdc9 !important;*/
 	background: url("#{resource['images:head_bg.jpg']}") #43bdc9;
 	padding-top: 40px;
@@ -54,7 +64,7 @@ body {
 	text-align: center;
 }
 
-.socialBar {
+.bsf-social-bar {
 	background-color: #3db7c4 !important;
 	text-align: center;
 	margin-bottom: 40px;
@@ -69,7 +79,7 @@ ul.share-buttons li{
   display: inline;
 }
 
-.socialIcon {
+.bsf-social-icon {
 	color: white;
 	margin-left: 10px;
 	padding: 15px;
