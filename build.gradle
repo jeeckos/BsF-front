@@ -17,7 +17,7 @@
  */
 
 buildscript {
-  version = '1.0.0.Beta8'
+  version = '1.0.0.CR1'
 
   repositories {
     mavenLocal()
@@ -46,15 +46,15 @@ targetCompatibility = '1.8'
 repositories {
     mavenLocal()
     mavenCentral()
-    maven {
-        url "https://repository.jboss.org"
-    }
-    maven {
-        url "https://repository.jboss.org/nexus/content/repositories/releases"
-    }
-    maven {
-        url "https://repository.jboss.org/nexus/content/groups/public"
-    }
+    //maven {
+    //    url "https://repository.jboss.org"
+    //}
+    //maven {
+    //    url "https://repository.jboss.org/nexus/content/repositories/releases"
+    //}
+    //maven {
+    //    url "https://repository.jboss.org/nexus/content/groups/public"
+    //}
 }
 
 dependencyManagement {
@@ -80,4 +80,3 @@ war {
    archiveName = 'BootsFacesFront.war'
    classpath fileTree(dir: 'bsflib', include: '*') // adds a file-set to the WEB-INF/lib dir.
 }
-
