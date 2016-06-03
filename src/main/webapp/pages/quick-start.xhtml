@@ -12,7 +12,7 @@
 			<ui:include src="requirements.xhtml" />
 			<!--  p>Read the <a href="requirements.xhtml">requirements page</a></p-->
 			<hr/>
-		
+
 			<h2>Download</h2>
 			<p>You have multiple ways to download BootsFaces:</p>
 			<b:tabView contentStyle="border-right: 1px solid #ddd;border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;padding:10px">
@@ -24,7 +24,7 @@
 							<dependency>
 							    <groupId>net.bootsfaces</groupId>
 							    <artifactId>bootsfaces</artifactId>
-							    <version>0.8.0</version>
+							    <version>0.8.6</version>
 							    <scope>compile</scope>
 							</dependency>
 						  ]]></script>
@@ -35,7 +35,7 @@
 					<p>Add these lines to your Gradle build file:</p>
 					<pre class="snippet">
 				         <script type="text/syntaxhighlighter" class="brush: java; gutter: false;"><![CDATA[
-							compile 'net.bootsfaces:bootsfaces:0.8.2'
+							compile 'net.bootsfaces:bootsfaces:0.8.6'
 						  ]]></script>
 					</pre>
 				</b:tab>
@@ -66,7 +66,7 @@
 				</b:tab>
 			</b:tabView>
 			<hr/>
-			
+
 			<h2>Starting a project</h2>
 			<p>
 			Probably the easiest way to get started is to grab one of the demo projects at <a href="https://github.com/stephanrauh/BootsFaces-Examples" target="_blank">https://github.com/stephanrauh/BootsFaces-Examples</a>
@@ -188,7 +188,7 @@
 			<p>If you need more customization you can use the custom value.</p>
 			<p>Please refer to the <a href="http://showcase.bootsfaces.net/layout/themes.jsf">Themes</a> page for instructions on Custom Theme.</p><br/>
 			<hr/>
-			
+
 			<h2>Building the BootsFaces.jar from source <b:badge value="revamped in BootsFaces 0.8.0" /></h2>
 			<p>
 				Most of the time you're probably happy with the binaries available at Maven Central or at the download page. However, it's also possible to build BootsFaces from source. This way, you get our latest bug fixes and the newest components, and you can also contribute bug fixes or components yourself to the project. (Truth to tell you get also our newest bugs. Use at own risk).
@@ -221,11 +221,11 @@
 				<br/>
 				<h3><b:iconAwesome name="arrow-circle-o-right" size="lg" style="color:#902f64;" /><h:outputText value="&#160;" />The Gradle build in your IDE</h3>
 				<br/>
-				Import the Gradle project into your IDE. Whether you import the subproject or not, is up to you. You don't need it. To build the project, first run Gradle with the target <code>buildResources</code> (which is inherited from the subproject). After that, run "Gradle assemble" to build the BootsFaces-OSP.jar. You find the jar file in the <code>build</code> folder of your project.	
+				Import the Gradle project into your IDE. Whether you import the subproject or not, is up to you. You don't need it. To build the project, first run Gradle with the target <code>buildResources</code> (which is inherited from the subproject). After that, run "Gradle assemble" to build the BootsFaces-OSP.jar. You find the jar file in the <code>build</code> folder of your project.
 			</p>
 			<br/>
 			<hr/>
-			
+
 			<h2>Customization of the BootsFaces.jar</h2>
 			<p>
 				Until there is a new version of the customizer, you can still customize the look and feel taking advantage of the build system. There are many Bootstrap customizers on the net, for example <a href="http://bootswatch.com/">Bootswatch</a>. What you need is a file with the variables to customize the build. Some customizers will provide you a .less file as well.
@@ -233,7 +233,7 @@
 				Put the files in the <code>BootsFaces/less</code> directory of the build and tweak the bs-* files to use your variables / .less file.
 			</p><br/>
 			<hr/>
-			
+
 			<h2>Roadmap<h:outputText value="&#160;" /><b:badge value="0.8.1 → 0.9 → 1.0" /></h2>
 			<p>
 				The big tickets of the next versions are:<br/>

@@ -7,53 +7,53 @@
       xmlns:ui="http://java.sun.com/jsf/facelets">
     <h:head>
         <title>BootsFaces: the next-gen JSF Framework based on Bootstrap</title>
-        
+
         <!--  Meta section -->
         <meta name="author" content="Dario D'Urzo" />
         <meta name="description" content="BootsFaces, a powerful JSF framework that takes the best from Bootstrap and jQuery UI to let develop well-designed state-of-the-art next-gen Front-end Enterprise Applications fast and easy supporting HTML5." />
-        <meta name="KEYWORDS" content="jsf, bootstrap, framework, java, enterprise, server, faces, jquery, usability, next-gen, web, html5, easy, modern, well-designed, website, state-of-the-art" />
+        <meta name="KEYWORDS" content="jsf, bootstrap, framework, java, enterprise, server, faces, responsive, jquery, usability, next-gen, web, html5, easy, modern, well-designed, website, state-of-the-art" />
         <meta name="robots" content="index, follow" />
         <meta name="revisit-after" content="7 days" />
         <meta name="DISTRIBUTION" content="GLOBAL" />
         <meta http-equiv="PRAGMA" content="NO-CACHE" />
         <meta name="copyright" content="TheCoder4.eu ( Riccardo Massera ), Stephan Rauh, Dario D'Urzo et al." />
-        
+
         <!--  Theme -->
 		<h:outputStylesheet library="theme" name="orange_teal/bootstrap.theme.css" />
 		<h:outputStylesheet library="theme" name="orange_teal/custom.css" /> <!--  {theme.customTheme} -->
-		
+
 		<!--  Styles section -->
 		<h:outputStylesheet library="css" name="syntaxhighlighter.theme.css" />
-		
+
 		<!--  Font includes -->
 		<!--  link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css' />
     	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' /-->
     	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
-    
+
     	<ui:insert name="custom-header" />
     </h:head>
-    
+
     <h:body addLabels="false" addMessages="false">
         <script>
         if ($.blockUI) {
           	$.blockUI.defaults.overlayCSS.opacity=0;
           	$.blockUI.defaults.message='<h1><img src="../javax.faces.resource/images/waitcursor.gif.jsf?ln=bsf" /></h1>';
         }
-        </script>  
-        
+        </script>
+
         <!-- scrollup -->
         <b:scrollUp distance="180" animation="fade" text="" scrollTitle="false" name="bsf-scroll" />
-               
+
         <ui:insert name="nbtop">
             <ui:include src="/pages/template/header.xhtml"/>
         </ui:insert>
-        
+
         <ui:insert name="content"/>
-        
+
         <ui:insert name="nbbottom">
             <ui:include src="/pages/template/footer.xhtml"/>
         </ui:insert>
-        
+
         <!--  scripts section  -->
 		<h:outputScript library="js" name="syntaxhighlighter.js" />
 		<h:outputScript library="js" name="clipboard.min.js" />
@@ -62,12 +62,12 @@
 		// Page scrolling style
 			// get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
 			var mainbottom = $('#main').offset().top + $('#main').height() - 20;
-	
-			// on scroll, 
+
+			// on scroll,
 			$(window).on('scroll',function(){
 			    // we round here to reduce a little workload
 			    var stop = Math.round($(window).scrollTop());
-	
+
 			    if (stop > mainbottom) {
 			        $('#main').addClass('navbar-scrolled');
 			    } else {
@@ -75,7 +75,7 @@
 			    }
 			});
 		// End of page scrolling style
-		
+
 		// Active menu in bar
 			$(document).ready(function() {
 				$(".navbar").find(".active").removeClass("active");
