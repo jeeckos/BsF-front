@@ -46,9 +46,9 @@ targetCompatibility = '1.8'
 repositories {
     mavenLocal()
     mavenCentral()
-    //maven {
-    //    url "https://repository.jboss.org"
-    //}
+    maven {
+        url "https://repository.jboss.org"
+    }
     //maven {
     //    url "https://repository.jboss.org/nexus/content/repositories/releases"
     //}
