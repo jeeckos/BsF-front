@@ -22,7 +22,7 @@ body {
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    border-color: -moz-use-text-color -moz-use-text-color #43bdc9;
+    /*border-color: -moz-use-text-color -moz-use-text-color #43bdc9;*/
     border-image: none;
     border-radius: 0;
     border-style: none none solid;
