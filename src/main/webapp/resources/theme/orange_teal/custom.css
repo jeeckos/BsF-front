@@ -1,6 +1,6 @@
-/** 
+/**
  *
- * THEME CUSTOMIZATION SECTION 
+ * THEME CUSTOMIZATION SECTION
  *
  **/
 body {
@@ -47,13 +47,16 @@ body {
 }
 
 .bsf-footer {
+	position: fixed;
+	bottom:0;
+	right: 0;
+	left: 0;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	text-align: center;
 	background-color: #3c3c3c;
-    color: #fff;
-    margin-top: 100px;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    text-align: center;
-    border-top: 1px solid #3db7c4;
+  color: #fff;
+  border-top: 1px solid #3db7c4;
 }
 
 .bsf-head-message {
@@ -182,9 +185,9 @@ p {
     line-height: 23px;
 }
 
-/** 
+/**
  *
- * CLIPPY SECTION 
+ * CLIPPY SECTION
  *
  **/
 .clippy {
@@ -267,9 +270,9 @@ code {
     padding: 0.2em;
 }
 
-/** 
+/**
  *
- * TOOLTIP SECTION 
+ * TOOLTIP SECTION
  *
  **/
 .tooltipped {
