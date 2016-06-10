@@ -420,3 +420,9 @@ code {
 .fullscreen-overlay-enabled.dark-theme .tooltipped.tooltipped-n::before, .fullscreen-overlay-enabled.dark-theme .tooltipped.tooltipped-ne::before, .fullscreen-overlay-enabled.dark-theme .tooltipped.tooltipped-nw::before {
     border-top-color: rgba(255, 255, 255, 0.8);
 }
+
+/* Download Buttons */
+span.btn-dl > a {
+￼    color: white;
+    text-decoration: none;
+}
