@@ -427,3 +427,6 @@ span.btn-dl > a {
 	color: white;
 	text-decoration: none;
 }
+
+/* Home Download/Share Buttons */
+.share-buttons a { text-decoration: none; }
