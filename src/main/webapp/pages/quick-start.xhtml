@@ -24,7 +24,7 @@
 							<dependency>
 							    <groupId>net.bootsfaces</groupId>
 							    <artifactId>bootsfaces</artifactId>
-							    <version>0.8.6</version>
+							    <version>#{versions.bsfVersion}</version>
 							    <scope>compile</scope>
 							</dependency>
 						  ]]></script>
@@ -35,7 +35,7 @@
 					<p>Add these lines to your Gradle build file:</p>
 					<pre class="snippet">
 				         <script type="text/syntaxhighlighter" class="brush: java; gutter: false;"><![CDATA[
-							compile 'net.bootsfaces:bootsfaces:0.8.6'
+							compile 'net.bootsfaces:bootsfaces:#{versions.bsfVersion}'
 						  ]]></script>
 					</pre>
 				</b:tab>
@@ -251,7 +251,6 @@
 					<li>fixing bugs :)</li>
 					<li>adding useful components</li>
 					<li>client-side validation and JSR303 support</li>
-					<li>find out why the <code>CombinedResourceHandler</code> of OmniFaces is needed</li>
 				</ul>
 				In any case, we'd like to hear from you. Use the bug tracker to inform us about bugs you've discovered, components you'd like to see or contributions you'd like to make. Your feedback is welcome!
 			</p>
