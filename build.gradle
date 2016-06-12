@@ -74,6 +74,9 @@ dependencies {
     providedCompile 'com.sun.faces:jsf-api:2.2.+'
     providedCompile 'com.sun.faces:jsf-impl:2.2.+'
     providedCompile 'org.glassfish.web:el-impl:2.2'
+
+    compile "net.bootsfaces:bootsfaces:0.9.0-SNAPSHOT"
+    
     compile "org.wildfly.swarm:jsf"
     compile "org.wildfly.swarm:cdi"
 }
