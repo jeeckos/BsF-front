@@ -14,7 +14,7 @@
 			<hr/>
 
 			<h2>Download</h2>
-			<p>You have multiple ways to download BootsFaces:</p>
+			<p>You have multiple ways to <a href="download.xhtml">download</a> BootsFaces:</p>
 			<b:tabView contentStyle="border-right: 1px solid #ddd;border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;padding:10px">
 				<b:tab title="Maven">
 					<br/>
@@ -227,8 +227,10 @@
 			<hr/>
 
 			<h2>Customization of the BootsFaces.jar</h2>
+			<p>The script build default is to build the library with the Bootstrap styles and all <a href="http://bootswatch.com/">Bootswatch</a> themes, but you can control what themes you want included setting the <code>bootswatch.theme</code> property in the build.properties file.
+			</p>
 			<p>
-				Until there is a new version of the customizer, you can still customize the look and feel taking advantage of the build system. There are many Bootstrap customizers on the net, for example <a href="http://bootswatch.com/">Bootswatch</a>. What you need is a file with the variables to customize the build. Some customizers will provide you a .less file as well.
+				You can also customize the look and feel taking advantage of the build system. There are many Bootstrap customizers on the net other than <a href="http://bootswatch.com/">Bootswatch</a>. What you need is a file with the variables to customize the build. Some customizers will provide you a .less file as well.
 				<br/>
 				Put the files in the <code>BootsFaces/less</code> directory of the build and tweak the bs-* files to use your variables / .less file.
 			</p><br/>
