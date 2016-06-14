@@ -1,4 +1,4 @@
-package org.bootsfaces;
+package net.bootsfaces.frontsite;
 
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;

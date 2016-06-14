@@ -1,4 +1,4 @@
-package org.bootsfaces.theme;
+package net.bootsfaces.frontsite;
 
 import java.io.Serializable;
 
