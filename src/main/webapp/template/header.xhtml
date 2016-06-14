@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui">
+
+	<div style="height: 50px">
+		<b:navBar id="main" brand="&nbps;&nbsp;BOOTSFACES" brand-href="#{request.contextPath}/index.xhtml"
+			brand-img="#{resource['images:bsf.simple.white.png']}"
+			brand-img-style="width:50px;height:50px;padding-top:0px"
+			brand-style="font-weight:bolder;padding-top:0px;padding-bottom:0px"
+			fixed="top"
+			sticky="true"
+			style="padding-top:3px; margin-bottom: 0px !important;"
+			styleClass="navColor">
+
+			<b:navbarLinks pull="right">
+				<b:navLink value="Quick Start" outcome="/quick-start" icon-awesome="play-circle" />
+				<b:navLink value="License" outcome="/license" icon-awesome="gavel" />
+				<b:navLink value="About" outcome="/about" icon-awesome="yelp" />
+
+				<b:navLink value="Showcase and Docs" href="http://showcase.bootsfaces.net/" icon-awesome="book" />
+				<b:navLink value="Examples" href="http://showcase.bootsfaces.net/Examples/" icon-awesome="desktop" />
+				<b:navLink value="GitHub" href="https://github.com/TheCoder4eu/BootsFaces-OSP" target="_blank" icon-awesome="github" />
+			</b:navbarLinks>
+		</b:navBar>
+	</div>
+</ui:fragment>

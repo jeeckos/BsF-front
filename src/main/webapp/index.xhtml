@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<ui:composition template="/template/baseTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="content">
+		<!-- Main navigation -->
+		<div class="bsf-head-message">
+			<h:outputText style="color: white; font-size: 2.5em;"
+				value="BootsFaces" />
+			<br />
+			<h:outputText style="color: white; font-size: 1.5em;"
+				value="a powerful and lightweight JSF framework based on Bootstrap 3 and jQuery UI" />
+			<br />
+			<h:outputText style="color: white; font-size: 1.5em;"
+				value="that lets you develop Front-end Enterprise Applications fast and easy" />
+		</div>
+		<div class="bsf-social-bar">
+			<ul class="share-buttons">
+				<li><a href="download.xhtml" title="Download BootsFaces"
+					target="_self"> <b:iconAwesome name="download" size="lg"
+							style-class="bsf-social-icon" />
+				</a></li>
+				<li><a href="https://twitter.com/bootsfaces" target="_blank"
+					title="Follow on Twitter"> <b:iconAwesome name="twitter"
+							size="lg" style-class="bsf-social-icon" />
+				</a></li>
+				<li><a href="https://plus.google.com/share?url=[http://www.bootsfaces.net/]"
+					target="_blank" title="Share on Google+"> <b:iconAwesome
+							name="google-plus" size="lg" style-class="bsf-social-icon" />
+				</a></li>
+				<li><a href="https://github.com/TheCoder4eu/BootsFaces-OSP"
+					target="_blank" title="Open GitHub"> <b:iconAwesome
+							name="github" size="lg" style-class="bsf-social-icon" />
+				</a></li>
+			</ul>
+		</div>
+
+		<!--  Mission content -->
+		<b:container>
+			<b:row>
+				<b:column col-md="4" col-sm="4">
+					<div class="tile-icon">
+						<b:iconAwesome name="rocket" />
+					</div>
+					<div class="tile-body">
+						<h2>Design your application quickly</h2>
+						<div class="tile-line"></div>
+						<p style="color: #555; font-size: 9pt; line-height: 1.5;">
+							<b:iconAwesome name="check-square-o" size="lg"
+								styleClass="bsf-icon-color" />
+							<h:outputText value="&#160;" />
+							<b>Beyond the concept of Components Framework</b><br /> Current
+							JSF frameworks strengths are mainly they are offering developers
+							lots of rich Components or Widgets. Instead, BootsFaces tries to
+							start from the pillars, focusing first on the page structure and
+							layout: the main goal is helping developers to obtain
+							well-designed and lightweight Websites with little effort.
+						</p>
+						<p style="color: #555; font-size: 9pt; line-height: 1.5;">
+							<b:iconAwesome name="check-square-o" size="lg"
+								styleClass="bsf-icon-color" />
+							<h:outputText value="&#160;" />
+							<b>Powerful layout features</b><br /> BootsFaces leverages
+							Bootstrap Grid System and lets you combine it with JSF Templating
+							features and the new Faces Flow to quickly develop complex
+							Front-end websites.
+						</p>
+						<p style="color: #555; font-size: 9pt; line-height: 1.5;">
+							<b:iconAwesome name="check-square-o" size="lg"
+								styleClass="bsf-icon-color" />
+							<h:outputText value="&#160;" />
+							<b>Pages automatically adapt on every device, <br />ranging from
+								mobile to desktop.</b><br /> The responsive features of BootsFaces
+							help you design only one version of your website, that will fit
+							mobile phones, small and big tablets and desktop screens.
+						</p>
+					</div>
+				</b:column>
+
+				<b:column col-md="4" col-sm="4">
+					<div class="tile-icon">
+						<b:iconAwesome name="child" />
+					</div>
+					<div class="tile-body">
+						<h2>Simple to use</h2>
+						<div class="tile-line"></div>
+						<p style="color: #555; font-size: 9pt; line-height: 1.5;">
+							<b:iconAwesome name="check-square-o" size="lg"
+								styleClass="bsf-icon-color" />
+							<h:outputText value="&#160;" />
+							<b>Just add one Jar to your Projects</b><br /> Using BootsFaces
+							is as simple as adding a library Jar to your Project.
+						</p>
+						<p style="color: #555; font-size: 9pt; line-height: 1.5;">
+							<b:iconAwesome name="check-square-o" size="lg"
+								styleClass="bsf-icon-color" />
+							<h:outputText value="&#160;" />
+							<b>Customize the framework to suit your needs</b><br />
+							BootsFaces build system lets you customize the look and feel of
+							Bootstrap based components and what components to include in the
+							library. You can use themes from Bootswatch as explained in the
+							<a href="http://showcase.bootsfaces.net/layout/themes.jsf">Themes</a> page or other customizers that provide you variables
+							and/or less files to customize the build
+						</p>
+						<p style="color: #555; font-size: 9pt; line-height: 1.5;">
+							<b:iconAwesome name="check-square-o" size="lg"
+								styleClass="bsf-icon-color" />
+							<h:outputText value="&#160;" />
+							<b>Well <a href="http://showcase.bootsfaces.net/">documented</a> Components</b>
+						</p>
+					</div>
+					<p class="text-center"><b:button outcome="/download" value="Download BootsFaces" icon-awesome="download" look="info"/></p>
+				</b:column>
+
+				<b:column col-md="4" col-sm="4">
+					<div class="tile-icon">
+						<b:iconAwesome name="cloud" />
+					</div>
+					<div class="tile-body">
+						<h2>Ready for the cloud</h2>
+						<div class="tile-line"></div>
+						<p style="color: #555; font-size: 9pt; line-height: 1.5;">
+							<b:iconAwesome name="check-square-o" size="lg"
+								styleClass="bsf-icon-color" />
+							<h:outputText value="&#160;" />
+							<b>Very small Footprint</b><br /> Up to 10x smaller compared to
+							other JSF frameworks: the small size of the library enables you
+							to have <b>lower memory</b> requirements, an important factor
+							when working with cloud environments and microservices.
+						</p>
+						<p style="color: #555; font-size: 9pt; line-height: 1.5;">
+							<b:iconAwesome name="check-square-o" size="lg"
+								styleClass="bsf-icon-color" />
+							<h:outputText value="&#160;" />
+							<b>Optimized code</b><br /> One of the goals is to strive to
+							combine the small memory requirements with optimized code, to get
+							your <b>pages render fast</b>.
+						</p>
+						<p style="color: #555; font-size: 9pt; line-height: 1.5;">
+							<b:iconAwesome name="check-square-o" size="lg"
+								styleClass="bsf-icon-color" />
+							<h:outputText value="&#160;" />
+							<b>Modular design</b><br /> Besides the fact that the build
+							system lets you choose which components to include, every
+							component loads only the resources it needs (CSS, JS). This way,
+							only the resources needed by the components effectively used in a
+							page will be requested from the server, optimizing <b>page
+							loading and rendering times</b>.
+						</p>
+					</div>
+				</b:column>
+			</b:row>
+
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+		</b:container>
+	</ui:define>
+</ui:composition>

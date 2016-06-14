@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Code Preview Test</title>
+
+	<h:outputStylesheet library="css" name="main.css" />
+	<h:outputStylesheet library="css" name="theme.css" />
+
+</h:head>
+<h:body>
+    <div style="width: 500px; margin: auto;">
+		<div id="example-target" class="example">
+			<div class="input-group">
+				<b:inputText id="foo2" value="https://github.com/zenorocha/clipboard.js.git" />
+			</div>
+		</div>
+		<pre class="snippet">
+	         <script type="text/syntaxhighlighter" class="brush: html; gutter: false;"><![CDATA[
+				<b:inputText id="foo2" value="https://github.com/zenorocha/clipboard.js.git" />
+			  ]]></script>
+		</pre>
+	</div>
+	
+	<h:outputScript library="js" name="syntaxhighlighter.js" />
+	<h:outputScript library="js" name="clipboard.min.js" />
+	<h:outputScript library="js" name="demo.js" />
+</h:body>
+</html>
