@@ -217,8 +217,16 @@
 				<code>gradlew.bat</code><br/>
 				on Windows systems.
 				<br/>
-				After few seconds you should see the "BUILD SUCCESSFUL" message and will find the library in the subdirectory build/libs .
+				After few seconds you should see the "BUILD SUCCESSFUL" message .
 				<br/>
+				The default Gradle build defaults to a conservative Java 6 target, therefore you will find the built library in the subdirectory <b>java6/build/libs</b> .
+				<br/>
+				You can configure your preferred target JVM version in the build.properties file, where you can also configure the compilation arguments for every target.
+				<br/>
+				You can run the build for multiple targets at a time, in this case you will find the built library in the corresponding path:<br/>
+				java6/build/libs for Java 6,<br/>
+				java7/build/libs for Java 7,<br/>
+				java8/build/libs for Java 8.<br/>
 				<h3><b:iconAwesome name="arrow-circle-o-right" size="lg" style="color:#902f64;" /><h:outputText value="&#160;" />The Gradle build in your IDE</h3>
 				<br/>
 				Import the Gradle project into your IDE. Whether you import the subproject or not, is up to you. You don't need it. To build the project, first run Gradle with the target <code>buildResources</code> (which is inherited from the subproject). After that, run "Gradle assemble" to build the BootsFaces-OSP.jar. You find the jar file in the <code>build</code> folder of your project.
