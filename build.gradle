@@ -17,7 +17,7 @@
  */
 
 buildscript {
-  version = '1.0.0.Final'
+  version = '2016.9'
 
   repositories {
     mavenLocal()
@@ -50,8 +50,11 @@ repositories {
         url "https://repository.jboss.org"
     }
     maven {
-        url "https://repository.jboss.org/nexus/content/groups/public"
+        url 'https://maven.repository.redhat.com/nexus/content/repositories/thirdparty-releases/'
     }
+    //maven {
+    //    url "https://repository.jboss.org/nexus/content/groups/public"
+    //}
     //maven {
     //    url "https://repository.jboss.org/nexus/content/repositories/releases"
     //}
