@@ -16,6 +16,24 @@
  * This file is part of the BootsFaces Project.
  */
 
+buildscript {
+  version = '2016.10.0'
+
+  repositories {
+    mavenLocal()
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath "io.spring.gradle:dependency-management-plugin:0.5.6.RELEASE"
+    classpath "org.wildfly.swarm:wildfly-swarm-plugin:$version"
+  }
+}
+
+
+apply plugin: "io.spring.dependency-management"
+apply plugin: 'wildfly-swarm'
+
 apply plugin: 'java'
 apply plugin: 'war'
 
@@ -28,7 +46,25 @@ targetCompatibility = '1.8'
 repositories {
     mavenLocal()
     mavenCentral()
+    maven {
+        url "https://repository.jboss.org"
+    }
+    maven {
+        url 'https://maven.repository.redhat.com/nexus/content/repositories/thirdparty-releases/'
+    }
+    //maven {
+    //    url "https://repository.jboss.org/nexus/content/groups/public"
+    //}
+    //maven {
+    //    url "https://repository.jboss.org/nexus/content/repositories/releases"
+    //}
 
+}
+
+dependencyManagement {
+  imports {
+    mavenBom "org.wildfly.swarm:bom:$version"
+  }
 }
 
 dependencies {
@@ -44,8 +80,10 @@ dependencies {
 
     compile "net.bootsfaces:bootsfaces:0.9.2-SNAPSHOT"
     
+    compile "org.wildfly.swarm:jsf"
+    compile "org.wildfly.swarm:cdi"
 }
 war {
-   archiveName = 'BootsFacesFront.war'
+   archiveName = 'BootsFacesFrontSwarm.war'
    //classpath fileTree(dir: 'bsflib', include: '*') // adds a file-set to the WEB-INF/lib dir.
 }
