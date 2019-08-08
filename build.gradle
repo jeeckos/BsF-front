@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2017 Riccardo Massera (TheCoder4.Eu)
+ * Copyright 2016-2019 Riccardo Massera (TheCoder4.Eu)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -19,6 +19,8 @@
 apply plugin: 'java'
 apply plugin: 'war'
 
+// BootsFaces Library Version to use in the Build
+ext.BootsFacesVersion = '1.4.2-SNAPSHOT'
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
@@ -42,7 +44,7 @@ dependencies {
     providedCompile 'com.sun.faces:jsf-impl:2.2.+'
     providedCompile 'org.glassfish.web:el-impl:2.2'
 
-    compile "net.bootsfaces:bootsfaces:1.5.0-SNAPSHOT"
+    compile "net.bootsfaces:bootsfaces:${BootsFacesVersion}" //1.5.0-SNAPSHOT"
     
 }
 war {
