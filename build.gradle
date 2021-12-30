@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2019 Riccardo Massera (TheCoder4.Eu)
+ * Copyright 2016-2022 Riccardo Massera (TheCoder4.Eu)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -16,8 +16,14 @@
  * This file is part of the BootsFaces Project.
  */
 
-apply plugin: 'java'
-apply plugin: 'war'
+
+// Apply the war plugin to add support for Java and WAR
+plugins {
+    id 'war'
+}
+
+//apply plugin: 'java'
+//apply plugin: 'war'
 
 // BootsFaces Library Version to use in the Build
 ext.BootsFacesVersion = '1.6.0-SNAPSHOT'
@@ -51,6 +57,7 @@ dependencies {
     implementation "net.bootsfaces:bootsfaces:${BootsFacesVersion}"
     
 }
+
 war {
    archiveFileName = 'BootsFacesFront.war'
    //archiveName = 'BootsFacesFront.war'
