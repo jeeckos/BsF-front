@@ -2,10 +2,10 @@ package net.bootsfaces.frontsite;
 
 import java.io.Serializable;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.SessionScoped;
 
-@ManagedBean(name="theme")
+@Named(value = "theme")
 @SessionScoped
 public class Theme 
 implements Serializable {
